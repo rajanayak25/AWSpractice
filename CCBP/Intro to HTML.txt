@@ -1,0 +1,140 @@
+
+Syntax:
+
+    Rules of Language
+
+Bug:
+
+Doesn't expect a desired output
+
+Ex: click on one image but it's redirected to other image
+    - image is not displayed properly
+
+Debugging:
+
+ - process of identifying & Resolving the Bugs - Fixing the bugs
+
+Tweaking the code:
+
+ - Making small changes in the code to understand the behaviour of S/W
+
+Ex: changing the text color from black to end
+
+Note: Google chrome has 82.5% Market share in India
+
+HTML:
+
+Syntax:
+
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    Hello world!
+  </body>
+</html>
+
+
+html element:
+
+Combination of start tag + content + end tag called as "html element"
+
+- heading <h1> ...</h1>
+
+- paragraph <p>....</p>
+
+- button <b>....</b>
+
+
+Ex:
+
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+   <h1>Tourism </h1>
+   <p> Place your trip which ever you want to enjoy!</p>
+   <button> Please click here </button>
+  </body>
+</html>
+
+
+CSS:
+
+ - Cascading style sheets
+ - it is a list of Rulesets
+ 
+Syntax:
+
+   selector {
+             property: value;
+             property: value;
+            }
+
+selector ex: h-center,center,horizontal,horizontal-center etc.
+
+  Ex:
+      .h-center {
+                  text-align: center;
+                }
+
+  here ,h-center is a selector, text-align is a property and center is the value for it
+
+
+Attribute:
+
+   - used to combine html and css
+   - used to provide additional information about HTML element
+   Ex: Colour, Text size, Shape, Underlines etc.
+
+- combining HTML&CSS  - "class" Attribute
+
+Syntax:
+   
+   <tag attribute = "value" > content </tag>
+ 
+Ex:
+ 
+  <h1 class = "h-center"> content </h1>     // every element we should write this
+
+
+wrapping:
+
+  Grouping all elements together at once place
+
+Container:
+  
+  Used for combining grouped elements
+
+container element: div
+
+Syntax: <div> other elements </div>
+
+ Ex:
+
+   <!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+   <div class = "h-center">
+   <h1>Tourism </h1>
+   <p> Place your trip which ever you want to enjoy!</p>
+   <button> Please click here </button>
+   </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

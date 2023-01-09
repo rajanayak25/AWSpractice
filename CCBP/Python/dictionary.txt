@@ -1,0 +1,20 @@
+data = {1:"Raj",
+        2:"Ajay",
+        3:"manideep"}
+        
+print(data[3])
+a=data.get(4,"Not found")
+print(a)
+
+keys = ['Rajesh','Manideep','Ajay']
+
+values = [25,25,23]
+
+data = dict(zip(keys,values))
+data['Nagaraj'] = 24
+print(data)
+
+prog = {'Js':'Atom','CS':'VS','Python':['Pycharm','Sublime'],'Java':{'JSE':'Nebeans','JEE':'Eclipse'}}
+
+print(prog['Python'][1])
+print(prog['Java']['JSE'])

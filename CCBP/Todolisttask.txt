@@ -1,0 +1,89 @@
+
+To do list task:
+
+HTML:
+
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <div class="card">
+        <h1 class="main-heading">Todolist </h1>
+        <p class="para">Each day I will accomplish one thing on my to do list.</p>
+        <p class="to-do-title">Read a Book </p>
+        <p class="to-do-description">I don't think that the human race will survive the next thousand years,unless we spread into space.There are too many accidents that can befall life on a single planet.But I'm an optimist...</p>
+
+        <div class="todo-card-footer">
+            <button class="button">Start</button>
+            <p class="text-underline">Don't skip introduction</p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+CSS:
+
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+
+.card {
+    background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/todolistbg.png");
+    background-size: cover;
+    height: 100vh;
+    width: 50vw;
+    padding: 40px;
+    color: white;
+    text-align: center;
+}
+
+.main-heading {
+    font-family: "Roboto";
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    padding: 10px;
+}
+
+.para {
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.to-do-title {
+    font-weight: bold;
+    text-align: left;
+}
+
+.to-do-description {
+    font-weight: normal;
+    text-align: left;
+}
+
+.button {
+    font-size: 16px;
+    border-radius: 2px;
+    border-width: 1px;
+    background-color: orange;
+    color: white;
+    height: 30px;
+    width: 70px;
+    font-weight: bold;
+
+
+}
+
+.todo-card-footer {
+    text-align: center;
+}
+
+.text-underline {
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-align: center;
+}

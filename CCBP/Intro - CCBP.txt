@@ -1,0 +1,148 @@
+
+
+Software -> Software is a set of instructions to hardware
+             - Its easily changeable
+             - have functionality
+             - it has versions
+
+Hardware -> Physical Componet Ex: Keyboard,Mouse,CPU etc.
+           - When electricity passed to it, it will accessible to S/W
+
+
+Operating System -> Its a main S/W which makes other softwares to work with the H/W
+                 -> Interface b/w H/W and S/W
+
+                 Different O.S:
+                 Computer: Windows 10, ubuntu,Mac OSX
+                 Mobile: android 11, ios13
+
+
+Internet: -> Computer network that interconnects billions of computer devices through out the world
+
+  Ex: Sender -> Sending message -> How are you? -> Divide as packets and transmiting through a N/w -> 1.How 2.are 3.you? -> Reasseble at Reciever Computer -> Message Recieved by Reciever
+
+  Router -> Connecting device b/w 2 N/w's
+
+  Route -> Its a path for transmission the packets
+
+Application:
+
+-> Application is a S/W which is developed for specific purpose 
+
+Ex: Google Chrome(Surfing internet), WhatsApp(Communication)
+
+Front end: 
+
+-> Everything which we can view is a part of front end Ex: Icons, Images,texts,Buttons etc.
+
+Parsing:
+
+-> Understanding and Seperating content Ex: Seperating header page and other content from a webpage
+
+Rendering:
+
+-> Displaying the Parsing part Ex: Displaying this is image and this is button in a webpage
+
+
+Markup: 
+
+Highlighting the views (texts/paragraphs) Ex: Company name
+
+CSS:
+
+Customization of styles like Font, Color, Shapes, Positioing etc.
+
+javascript: 
+
+-> It can change the website contents dynamically with out reloading entire site
+
+Getting required content what we requests only instead of whole information(entire site)  Ex: if we request cart details it will show only cart related information
+
+Mobile Apps:
+
+ Android: Java, Kotlin IOS: Swift, Objective-C
+
+Responsive Web Design:
+
+ Designing a website which fit for All type of screensizes Ex: Website should fit in For Mobile phones (compatible to 7inch display) &For Laptop 16 inch display 
+
+Cross Platform: 
+
+-> Platfroms which are used for Developing Apps in multiple Environments like Android and IoS
+-> It will Reduce the time for Developers
+
+Ex: React Native - Developed by Facebook   (using by Tesla,Skype, Facebook)
+    Flutter - Developed by Google  (using by ebay, Alibaba Group) 
+
+
+Backend:
+
+Server + Database - retrieving data stored & processing data 
+
+Data:
+
+-> In Backend, Data is any information that has to be stored
+
+Ex: Images, texts, videos etc.
+
+-> Data Occcupied in space measured in the units of bits and bytes like kilobytes,megabytes etc.
+             
+
+Database:
+
+-> Database makes it easy to deal with information(data) like organizing, storing and use data efficiently.
+
+  - Store  - stores database in a organizing manner
+  - Organize
+  - Access
+  - Update etc.
+
+To Deveolp servers listed Languages used:
+
+- Python
+- Go
+- Java
+- C#
+- php
+- Pearl
+- Ruby
+- JS
+
+To Manage Databases:
+
+- My SQL
+- PostgreSQL
+- SQLite
+- Mongo DB
+- Maria DB
+- Dynamo DB
+- redis
+- Cassandra
+- elastic
+
+User Interface:
+
+ User interacting with softwares through UI
+
+Application programming interface(API):
+
+ Applications interact with each other through API's
+
+Cloud:
+
+-> Servers that are accessed over internet
+-> The Softwares that run on those servers
+
+Cloud providers take care of:
+
+- Security
+- Maintenance
+- Purchasing H/W
+- Power and Internet connection
+- Replace faulty H/W
+
+
+
+
+
+

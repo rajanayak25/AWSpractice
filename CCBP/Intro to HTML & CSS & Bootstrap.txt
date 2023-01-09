@@ -1,0 +1,1608 @@
+
+Syntax:
+
+    Rules of Language
+
+Bug:
+
+Doesn't expect a desired output
+
+Ex: click on one image but it's redirected to other image
+    - image is not displayed properly
+
+Debugging:
+
+ - process of identifying & Resolving the Bugs - Fixing the bugs
+
+Tweaking the code:
+
+ - Making small changes in the code to understand the behaviour of S/W
+
+Ex: changing the text color from black to end
+
+Note: Google chrome has 82.5% Market share in India
+
+HTML:
+
+Syntax:
+
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    Hello world!
+  </body>
+</html>
+
+
+html element:
+
+Combination of start tag + content + end tag called as "html element"
+
+- heading <h1> ...</h1>
+
+- paragraph <p>....</p>
+
+- button <b>....</b>
+
+
+Ex:
+
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+   <h1>Tourism </h1>
+   <p> Place your trip which ever you want to enjoy!</p>
+   <button> Please click here </button>
+  </body>
+</html>
+
+
+CSS:
+
+ - Cascading style sheets
+ - it is a list of Rulesets
+ 
+Syntax:
+
+   selector {
+             property: value;
+             property: value;
+            }
+
+selector ex: h-center,center,horizontal,horizontal-center etc.
+
+  Ex:
+      .h-center {
+                  text-align: center;
+                }
+
+  here ,h-center is a selector, text-align is a property and center is the value for it
+
+
+Attribute:
+
+   - used to combine html and css
+   - used to provide additional information about HTML element
+   Ex: Colour, Text size, Shape, Underlines etc.
+
+- combining HTML&CSS  - "class" Attribute
+
+Attribute name  - class
+
+Atrribute value - h-center (selector)
+
+Syntax:
+   
+   <tag attribute = "value" > content </tag>
+ 
+Ex:
+ 
+  <h1 class = "h-center"> content </h1>     // every element we should write this
+
+
+wrapping:
+
+  Grouping all elements together at once place
+
+Container:
+  
+  Used for combining grouped elements
+
+container element: div
+
+Syntax: <div> other elements </div>
+
+ Ex:
+
+   <!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+   <div class = "h-center">
+   <h1>Tourism </h1>
+   <p> Place your trip which ever you want to enjoy!</p>
+   <button> Please click here </button>
+   </div>
+  </body>
+</html>
+
+
+
+Ex 2:
+
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+      
+   <!--<div class = "h-center">-->
+   <div class ="card h-center">
+   <h1 class = "main-heading">Tourism </h1>
+<!--   <p style = "color: blue;"> Place your trip which ever you want to enjoy! </p> <!-- adding style in html itself-->
+   
+   <p class = "paragraph"> Place your trip which ever you want to enjoy! 
+    -- Create Your Bagfull Memories --
+   </p>
+   <button> Please click here </button>
+   
+   </div>
+  </body>
+</html>
+
+CSS:
+
+.main-heading
+{
+    color:red;
+}
+
+.paragraph
+{
+    color:grey;
+}
+
+.card
+{
+    background-color: lightblue;
+}
+
+
+
+Font - families:
+
+font-family: "Roboto" 
+    
+Ex: Caveat,Lobster,Monoton
+
+Font - size:
+
+font-size: 14px
+
+Ex: 22px,30px,40px
+
+Font - Style:
+
+font-style: italic;
+font-style: normal;
+
+Font - weight (width of text):
+
+font-weight: normal;
+font-weight: bold;
+
+Text- decoration:
+
+text-decoration: underline;
+text-decoration: overline;
+text-decoration: line-through;
+
+
+To import font-families:
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+
+Box Model:
+
+- Every HTML element on a webpage is a rect angular box
+
+Each rect angular box has different properties:
+
+ - height
+ - width
+ - margin
+ - border
+ - padding  -> space b/w content and box
+
+viewport:
+
+- To occupy image fully in various screen sizes
+
+Ex: height -  50vh  - 50%
+    width - 100vw - 100%
+
+background-size:cover;   - to cover image of entire background size
+
+Adding a Background image to a container:
+
+ bg-container - property used
+
+Color can be represented as 
+ 
+ - color names
+
+ - hex code     Ex: #25b1cc    - we can choose among 16,777,216 hex codes
+  
+  choose from web -  go to color picker and hover the mouse will get a hex code and use it in your code
+
+ - HSL
+ - RGB
+
+Border Properties:
+
+- border-radius   Ex: border-radius: 5px;   12px, 22px
+
+- border-width   Ex: Ex: border-width: 0px;   2p, 4px, 6px   removing outside edge colour
+
+- border-style
+
+   - dotted
+   - dashed
+   - solid
+   - none
+
+
+- border-color
+
+
+
+
+adding corner styles to card:
+
+  border-top-left-radius:25px;
+  border-top-right-radius:25px;
+  border-bottom-left-radius:25px;
+  border-bottom-left-radius:25px;
+
+
+Padding:
+
+padding:5px;   - maintain spaces of 4 sides b/w content and container
+
+
+We can give multiple stylings to multiple elements Ex: buttons have same height and width with different bg color
+
+Ex:
+
+HTML:
+
+<button class = "button button-green"> Get Started </button>
+
+
+CSS:
+
+.button-green
+{
+    background-color: green;
+    
+}
+
+
+Bootstrap:
+
+Bootstrap is a large collection of predefined reusable code snippets written in HTML, CSS, Javascript
+
+Example: Buttons, Cards etc.
+
+Carousels : sliding of images
+
+- To use code snippets we need to add them in head element, we call them as "Bootstrap CDN" see them below:
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </head>
+
+
+Ex:
+
+<button class="btn">Get Started</button>     // we add btn class here, we need not write any css code we can directly get a button 
+
+<button class="btn btn-primary">Get Started</button> // btn-primary will add blue button here
+
+btn btn-secondary
+
+btn btn-success
+
+btn btn-danger
+
+
+Bootstrap have some predefined classes:
+
+card, active, badge, caption etc.
+
+Bootstrap provides us with different types of buttons. One of them is outline buttons, which don't have a background color
+
+    <button class="btn btn-outline-primary">Get Started</button>
+    <button class="btn btn-outline-secondary">Get Started</button>
+    <button class="btn btn-outline-success">Get Started</button>
+
+For text styles - To apply different cases like upper case, lower case, etc. to the text, Bootstrap has the following class names:
+
+<p class="text-uppercase">Plan your TRIP.</p>
+
+
+Layout:
+
+A layout is a pattern by which we structure the information and arrange the elements on website
+
+Methods for Layouts:
+
+CSS Grid (Advanced)
+
+Flex Box (Stable):
+
+Helps us to arrange HTML elements either horizontally or vertically
+
+
+Flexbox properties:
+ 
+ - Flexbox container
+ - Direction
+ - Justify content
+ 
+
+Flex item:
+
+All HTML elements inside Flexbox container called Flex items
+
+Flex direction:
+
+It will decide the direction of flex items like Row or Column with in Flex container
+
+Justify content:
+
+defines the alignment of flex items along the flex direction
+
+Ex: justify-content-start, justify-content-center, justify-content-end
+
+
+Bootstrap provides predefined classes for flexbox container:
+
+ d-flex: class name to define flex container
+
+ flex-column: for vertical moving direction
+ 
+ justify-content-end: move the card to bottom
+
+
+Ex:
+
+  <div class="bg-container d-flex flex-column justify-content-end ">
+
+
+HTML image element:
+
+Syn: <img src = "URL"/>
+
+void element:
+
+-> html element which have only start tag and do not contain contents or end tag
+
+Syn: <tag/>
+
+Ex:<img src= "https://img.freepik.com/free-photo/mesmerizing-shot-famous-historic-taj-mahal-agra-india_181624-16028.jpg?size=626&ext=jpg&ga=GA1.2.667594458.1663421236" class = "fav1-image" \>
+
+-here, we added multiple attributes - image url and class attribute
+
+
+CSS Margin property:
+
+- we can get spacing b/w 2 elements by using css box property margin
+
+
+Ex:
+
+.place1-container
+{
+    margin:15px;     // adding space of 15px
+}
+
+margin - values:
+
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+
+
+When to use CSS Padding:
+
+To specify the space around the four sides of the content of an HTML element.
+To add the space between the content and border of an HTML element.
+
+When to use CSS Margin:
+
+To specify the space around the four sides of an HTML element.
+To add the space between HTML elements.
+
+
+Bootstrap - using version - v4.5.2 
+
+
+Adding Corousel and Embedded video through Bootstrap v4.5:
+
+
+Corousel:
+
+-> Go to getbootstrap.com - click on components - > open corousel
+
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+- Copy the code and paste it wherever u need
+
+
+Embed video:
+
+-> Go to getbootstrap.com - click on utilities - > open embed and copy and use it
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+</div>
+
+
+ 
+https://youtu.be/44rTTLjZZz4  - > "44rTTLjZZz4" -> paste only this video id in above link after embed -> src="https://www.youtube.com/embed/44rTTLjZZz4?rel=0
+
+
+
+https://youtu.be/5TR-blT4Ao4
+
+Website Integration:
+
+To Link Multiple Sections
+
+
+Ex:
+
+<div id = "section-1">
+       <p> This is section one </p>
+       <button class = "btn btn-primary" onclick="display('section-2')">
+           Go to section 2
+       </button>
+   </div>
+
+ "id" attribute -> to identify hrml element as uniquely  like buttons,containers, paragraph etc.
+  
+ <div id = "section-1"> 
+
+ "The id should be specify prefix as *section"
+
+ "onclick" event -> it occurs when u click on a html element
+ 
+ <button class = "btn btn-primary" onclick="display('section-2')">
+
+
+HTML Lists:
+
+1. un ordered
+2. ordered
+
+
+Ordered:
+    
+             <ol class = "ordered-list">
+                 <li> Waghah Border</li>
+                 <li> Jailan wala Bagh</li>
+                 <li> Bathinda Fort</li>
+                 <li> Harike WetLand</li>
+                 
+             </ol>
+
+un-ordered:
+
+Ex:
+
+            <ul class="paragraph">
+                 <li> Benaras</li>
+                 <li> Kaasi Viseswara </li>
+                 <li> Uttarpradesh </li>
+                 <li> India </li>
+             </ul>
+
+styling the html list:
+
+.unordered-list
+{
+   /* list-style-type: circle;
+
+      list-style-type: none;*/
+    list-style-type: square;
+    color:blue;
+}
+
+
+
+HTML elements:
+
+Heading - h1
+
+Paragraph- p
+
+Button - button
+
+Container - div
+
+image - img src
+
+HTML Lists:
+
+un-ordered lists -ul
+
+ordered lists - ol
+
+list item - li
+
+HTML Attributes:  (To combine HTML with CSS)
+
+class
+
+id
+
+onclick
+
+
+CSS:
+
+
+Text Properties:
+
+color
+
+font-size
+
+font-family
+
+font-style
+
+text-decoration
+
+text-align
+
+Box Properties:
+
+height
+
+width
+
+margin
+
+paddding
+
+border
+
+  - border-radius
+
+  - border-width
+
+border-radius
+
+   - border-top-left-radius
+
+   - border-bottom-left-radius
+
+    - border-top-right-radius
+
+   - border-bottom-right-radius
+
+Bootstrap:
+
+Flex box class names:
+
+d-flex
+
+flex-row
+
+flex-column
+
+justify-content-start
+
+justify-content-center
+
+justify-content-end
+
+"HTML elements inside flex box called flex-items" 
+
+components & utilities:
+
+buttons
+
+carousel
+
+video embed
+
+ - Youtube video
+
+CCBP UI Kit
+
+Display Utility
+
+Webiste : Behind the scenes
+
+rajesh.ccbp.tech
+
+rajesh -  subdomain
+
+ccbp - domain (name)
+
+tech - top level domain
+
+Ex: www.amazon.in
+
+www - subdomain
+
+amazon - domain (name)
+
+in - top level domain
+
+-> We request a domain and DNS Server will gives you the specific ip address to the browser then it will redirect to server and gives us the result
+
+
+Name                     Ip address
+
+Google                 197.121.91.1
+
+
+-> This specifiic domain names and ip addresees stored in DNS(Domain naming system/server)
+
+-> DNS translates the domain names to to IP addresses so browser can load internet resources
+
+
+
+Amazon Route 53:
+
+Highly available and scalable cloud DNS web service
+
+Cloud Front:
+
+Server
+
+S3(Simple storage service)
+
+Storage
+
+
+HTML Hyper Links:
+
+- used to navigate to other web resources or to specific element with in html document
+
+- also called "links"
+
+
+Ex:
+
+< a href = "URL" > Content </a>     - Anchor element
+
+href - Attribute name
+
+URL - Attribute value
+
+</a> - End tag
+
+
+target - attribute specifies where to open the linked web resource, the link will open in New tab
+
+
+Ex:
+
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <a href = "https://learning.onthegomodel.com/" target = "_blank"> CCBP 4.0</a>
+  </body>
+</html>
+
+
+Navigate with in same html document:
+
+- first provide id for a section
+
+
+Ex: 
+
+<a href= "URL#SectionId">Section</a>   - when we want to move a particular page specific secction 
+
+<a href = "#SectionId">   - when we want to move a section with in a document
+
+
+Ex:
+
+   <body>
+      <div class="profile">
+         <img
+            src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/profile-avatar-img.png"
+            class="image"
+         />
+         <h1 class="heading">Vinod</h1>
+         <p>
+            Vinod is an Indian-American business executive. He is the chief
+            executive officer of Vincent Club Inc
+         </p>
+         <a href = "#bioSection">Bio</a>                                    - adding hyper link for Bio in profile section with Bio section id
+
+      </div>
+
+<div class="bio" id="bioSection">
+
+
+Using Image as Hyper link:
+
+with in a page:
+          <a href = "#SectionBio">
+             <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fz%2Fbio-label-7826055.jpg&imgrefurl=https%3A%2F%2Fwww.dreamstime.com%2Froyalty-free-stock-photo-bio-label-image7826055&tbnid=9FkuO0O463FzqM&vet=12ahUKEwjSkdTnrOX6AhVfi9gFHeXhC7cQMygNegUIARD7AQ..i&docid=2CUHliYKk25r1M&w=1300&h=1390&q=bio%20image&ved=2ahUKEwjSkdTnrOX6AhVfi9gFHeXhC7cQMygNegUIARD7AQ/>
+             
+         </a>
+
+Adding image as hyper link to other wepage:
+
+<a href = "https://learning.onthegomodel.com">
+<img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fassets-global.website-files.com%2F5fa61cbbf0d432b3230f62b1%2F5fabe277dc66fc9cbfdbcbe1_CCBP%25204.0_logo_Colour.png&imgrefurl=https%3A%2F%2Fwww.ccbp.in%2F&tbnid=PEypWJNiIUEmNM&vet=12ahUKEwiE_JSksOX6AhXmjNgFHVStBgsQMygAegUIARCTAQ..i&docid=a4_PpltGcuuMhM&w=2360&h=560&q=ccbp%20tech%204.0&ved=2ahUKEwiE_JSksOX6AhXmjNgFHVStBgsQMygAegUIARCTAQ/>
+            
+
+HTML Void elements:
+
+
+Line Break element:
+
+<br/>           - to add a break line
+
+Horizontal Rule element:
+
+<hr/>    - adding a horizontal line
+
+------------
+
+On demand session:
+
+ To get url's of images
+
+visit -> cloudinary.com
+
+ After signup with gmail, open cloudinary and upload a image from ur local drive in media section
+
+ After that, click on options menu of image and go to copy url and use it wherever u need in ur page
+
+
+-----------------------------
+
+
+Responsive web design:
+
+To Make webpages create best user experience in all the devices like Mobiles,Tablets,PC's, Laptops etc. 
+
+To Develop Responsive Webdesign we have Bootstrap Categorize devices into 5 Responsive tiers:
+
+
+These are called "Responsive Break Points"
+
+Device	Device Size (Width)	Class Name Prefix
+--------    --------------------    ------------------
+
+Extra small devices	<576px	col-
+Small devices	      >=576px	col-sm-
+Medium devices	      >=768px	col-md-
+Large devices	      >=992px	col-lg-
+Extra large devices	>=1200px	col-xl-
+
+
+Bootstrap grid system:
+
+Made up of three things:
+
+Container     - Consist of Rows and Columns
+
+Rows          - Rows consist of Columns
+
+Columns       - Content should be placed in Columns (buttons,texts,videos etc)
+
+Different coln systems:
+
+4 coln system
+
+8 coln system
+
+12 coln system
+
+We can specify the coln no's like if 12 - it will occcupy entire screen
+
+Ex:
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      I'm your content inside the grid!
+    </div>
+  </div>
+</div>
+
+
+Ex 2:
+
+ <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <h1 class="heading">Taj Mahal</h1>
+          <p>The Taj Mahal is on the southern bank of the river Yamuna.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <h1 class="heading">Mysore Palace</h1>
+          <p>
+            The Mysore Palace is a historical palace and the royal residence at
+            Mysore.
+          </p>
+        </div>
+
+
+Bootstrap Background utility names:
+
+bg-primary
+
+bg-secondary
+
+bg-success
+
+bg-info
+
+bg-warning
+
+bg-light
+
+bg-white
+
+bg-danger
+
+
+Bootstrap Spacing Utilities:
+
+CSS Margin property	Bootstrap class name
+--------------------    -------------------
+
+margin	                 m-*
+margin-top	                 mt-*
+margin-right	           mr-*
+margin-bottom	           mb-*
+margin-left	                 ml-*
+
+Margin Values:
+
+Size	Value
+----  --------
+
+0	0
+1	0.25 * spacer
+2	0.5 * spacer
+3	1 * spacer
+4	1.5 * spacer
+5	3 * spacer
+
+
+Padding:
+
+CSS Padding property	Bootstrap class name
+-------------------     --------------------
+padding	                 p-*
+padding-top	                 pt-*
+padding-right	           pr-*
+padding-bottom	           pb-*
+padding-left	           pl-*
+
+Calculation Ex:
+
+m-5 = 3 * 16px = 48px  ('*' - each spacer - 16px)
+
+
+Ex: 
+
+ <div class = "container">
+        <div class = "row">
+            <div class = "col-12 col-md-6 mb-3">
+                <div class="bg-primary color-box">
+                    <p class="paragraph-color">Primary</p>
+                </div>
+                </div>
+                 <div class = "col-12 col-md-6 mb-3">                    // adding medium device columns and margin bottom
+                <div class="bg-secondary color-box">
+                    <p class="paragraph-color">Secondary</p>
+                </div>
+
+
+Dont use Margin-left and Margin-right for Boot strap columns
+
+Bootstrap Navigation Bar:
+
+Go to getbootstrap.com -  documentation - components -  navbar
+
+nav element is a container element which adds naviagtion bar to our websites
+
+Ex:
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link disabled">Disabled</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+HTML elements divided into 2 categories:
+
+
+1.Block-level elements
+
+Ex: div,heading,paragraph
+
+They will occupy the entire width available for them
+
+
+2.inline elements
+
+Ex: image, button , hyper links (anchor a ), span
+
+They will occupy the width sufficient for them
+
+Note: We can align the text in in-line elements by using text-align
+      
+      We can't align the text in Block-level elements
+
+
+To align navbar :
+
+margin:
+
+mr-auto
+
+m-auto
+
+ml-auto
+
+
+Ex:
+
+.nav-bar-align-elements
+{
+    margin-left:auto;             // align right side
+    margin-right:auto;            // align left side
+    margin:auto;                  // align center
+}
+
+
+Bootstrap margin class names:
+
+We can align HTML Block-level elements horizontally using CSS margin property.
+
+Apart from the numbers 0-5, the margin also has the below Bootstrap class names.
+
+m-auto
+ml-auto
+mr-auto
+
+<div class="navbar-nav mr-auto bg-light">             //align leftside
+
+<div class="navbar-nav ml-auto bg-light">             //align-rightside
+ 
+<div class="navbar-nav m-auto bg-light">              // align-center
+
+
+CSS Selector:
+
+used to styling the HTML Elements which we want to style
+
+Different types of selectors:
+
+Simple selector:
+
+- Class Selector: Selects all the HTML elements that have a given class name as the class attribute value
+
+ consist of ' . ' followed by class value
+
+Ex: <h1 class = "heading">Home</heading1>
+
+.heading-1
+{
+  font-size:14px;
+}
+
+
+- ID Selector: Selects HTML elements based on its ID attribute value 
+
+ consist of '#' followed by ID of the element
+
+Ex:
+
+ <body>
+    <h1 id = "Country-Heading"> ABout Inida</h1>
+   <p id = "paragraph-1"> My Paragraph</p>
+  </body>
+
+CSS:
+
+#Country-Heading
+{
+    color:blue;
+}
+
+#paragraph-1
+{
+    font-family:"Caveat";
+}
+
+
+- Type Selector: Selects all the HTML elements with in the document based on their tag names (Ex: h1,div,p etc)
+
+<body>
+       <h1>About Inida</h1>
+       <p> Population of India is reahcing about 140 crores</p>
+  </body>
+
+
+CSS:
+
+h1
+{
+    color:blue;
+}
+p
+{
+    font-family:"Caveat";
+}
+
+
+Most fundamentals concepts of CSS:
+
+The Styles that are applied to HTML elements depend on 3 concepts:
+
+ - Inheritance:  Some of the CSS property values set on the Parent elements recieved(Inherited) by the child Elements
+
+Ex: 
+
+ <div class = "parent-container">                  //parent element
+       <h1>About Inida</h1>
+       <p> Population of India is reahcing about 140 crores</p>   //child element
+  </div>
+
+CSS:
+
+.parent-container           
+{
+    color:blue;
+    text-align:center;
+}
+
+Inherited properties are:
+
+color
+font-size
+text-align
+font-family
+list-style-type
+font-weight etc.
+
+Non-Inherited properties are:
+
+width,height
+border-color,border-width
+margin
+padding
+background-image
+background-color
+text-decoration
+ 
+
+CSS Specificity: With the help of this Browser will Indentifies which are the most relavant properties values applied for HTML element 
+
+Ex:
+
+  <body>
+  
+  <h1>Heading1</h1>                     //type selector
+  <h1>Heading2</h1>
+  <h1>Heading3</h1>
+  <h1 class = "heading-1">Heading4</h1>         //class selector
+  <h1 class = "heading-1">Heading5</h1>
+  <h1 class = "heading-1" id="heading-6">Heading6</h1>             //id selector
+  </body>
+
+CSS:
+
+h1 {
+    color:grey;
+    font-family:"Arial";
+}
+
+.heading-1
+{
+    color:blue;
+    font-family:"Bree Serif";
+}
+#heading-6
+{
+    font-family:"Roboto";
+    
+}
+
+
+Specificity :
+
+Inline  --> Id Selectors --> Class Selectors --> Type Selectors
+
+
+Class Selector have More Specificity where as Type selctor has less specificity
+
+Id selector has highest specificity than class and Type selector
+
+ - Cascade
+
+Attribute Selector
+
+Universal Selector
+
+Pseudo-class
+
+Compound selector
+
+Complex Selector
+
+
+Inline styles:
+
+ Inline styles are applied directly to the HTML elements
+
+ It uses "style" attribute with CSS Property values defined with in it
+ 
+ Inline styles have highest specificity
+ 
+ Inline styles are not reusable bcoz we need to define the style for each and every html element
+ 
+ Inline styles are not recommened because we need to write it in html file itself so it will increase code reusability
+
+ 
+
+Ex:
+
+  <body>
+    <h1 class = "heading" id="heading-1" style = "color:white;background-color:blue"> My Heading</h1>
+  </body>
+
+
+CSS Cascade:
+
+  The Source order of css rulesets matter
+
+  When two rulesets apply that have equal specificity the one last comes that will be apply/used
+
+  The Order of HTML doesn't matter the order which you write in CSS will be considerable
+
+ Ex:
+
+ <h1 class = "style-2 style-1">About India</h1>
+
+  .style-1   {
+      color:green;
+       }
+
+ .style-2 {
+
+     color:orange;                 // this will be applied
+     }
+
+ 
+The Important Execption (CSS):
+
+Note: its recommended when we deal with external libraries and bootstrap dont use frequently
+
+Ex:
+
+<h1 class = "style-1">About India</h1>
+
+CSS:
+
+  .style-1
+{
+    color:green;
+}
+h1
+{
+    color:orange !important;         // this will become important and this will use first
+}
+
+ 
+Ex 2:  if both we marked as important
+
+  .style-1
+{
+    color:green !important ;        // this will become important and this will use first bcoz class selector has high specificity       
+}
+h1
+{
+    color:orange !important;         
+}
+
+
+Ex 3: if both have same specificity
+
+h1
+{
+    color:green !important;
+}
+h1
+{
+    color:orange !important;       // this will come first as per latest (last used)
+}
+
+
+Bootstrap container:
+
+It provides default left and right spacings starting from smaller devices for better user experience
+
+- it will reflect on Larger devices
+
+If we dont need the space we can use container-fluid class name instead of container class name
+
+Ex: <div class="container">
+
+container-fluid:
+
+It will occupy full size of the content with out any space
+
+
+Transparent as background color:
+
+The CSS transparent keyword represents a fully transparent color. This makes the background behind the colored HTML element completely visible.
+
+Ex: bootstrap -  bg-transparent
+
+
+How to Style a particular text in HTML element:
+
+By using Span Element - its a generic inline container
+
+
+CSS Percentage Units:
+
+width : 50%  - it will occupy exactly 50% of its parent element
+
+Ex: container width = 500px it will occupy 250px
+
+Ex: width:25%
+    width:50%
+    width:75%
+    width:100%
+
+Bootstrap utilizing percentages:
+
+Ex:  w-25
+     w-50
+     w-75
+     w-100
+
+Note: Based on the width the height will automatically adjust based on the image size
+
+To add Bootstrap Icons:
+
+Go to -> icons.getbootstrap.com
+
+Ex: Right Arrow:
+
+ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+</svg>
+
+-> We can give width and height in pixels as well
+
+-> In fill section we can add the specific colors Ex: #323f4b , if we keep "currentColor" it will take whatever it has the parent color
+
+
+Bootstrap Shadows:
+
+ shadow-none
+ 
+ shadow-sm
+
+ shadow
+
+ shadow-lg
+
+
+For Visual order Bootstrap provides Order class names:
+
+first we need to convert container as "d-flex" 
+Ex:
+
+Order-1
+
+Order-2
+
+Order-3
+
+We can change the Order by breakpoint as well based on device size:
+
+Ex: order-1    for extra small & small devices
+
+    order-md-2  for medium devices
+   
+    order-lg-3  for large and extra-large devices
+
+Ex:
+
+<div class="container">
+        <div class="row">
+          <div class="col-12 col-md-5 order-1 order-md-2">               //order-1 for small & extra small and order-2 for medium and large devices
+            <div class="text-center">
+              <img
+                src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/delivery-payment-section-img.png"
+                class="delivery-and-payment-section-img"
+              />
+            </div>
+          </div>
+
+
+Bootstrap Display utilities:
+
+Hiding HTML elements:
+
+We can hide and show HTML elements responsively for each screen size with Display utilities based on breakpoints(sm,md,xl)
+
+Ex:
+
+  d-none
+  
+  d-sm-none
+
+  d-md-none
+ 
+  d-lg-none
+
+Note: We can use any number ranges from 0 to 12 for an order class
+
+Showing HTML elements:
+
+Ex:
+
+ d-block
+
+ d-md-inline
+
+ d-lg-block
+
+Ex:
+
+   <div class = "my-container">
+       <p class="box d-md-block">Box-1</p>                           //showing box1 in medium devices
+       <p class="box d-md-none">Box-2</p>                           //hiding box2 in medium devices
+       <a href="#" class="d-md-none d-lg-inline">Wikipedia</a>      // hiding link in medium and showing in large devices
+   </div>
+
+
+Adding extra icons in a website:
+
+fontawesome.com
+
+  <div class="follow-us-section pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="follow-us-section-heading">Follow Us</h1>
+                <i class="fa-brands fa-twitter icon"></i>                       //adding twitter icon
+                </div>
+            </div>
+
+
+Footer section:
+
+<div class="footer-section pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-munch-logo-light.png" class="food-munch-logo" />
+                    <h1 class="footer-section-mail-id">orderfood@foodmunch.com</h1>
+                    <p class="footer-section-address">
+                        123 Ayur Vigyan Nagar, New Delhi, India.
+                    </p>
+                </div>
+
+
+Adding Extra icons:
+
+visit fontawesome.com
+
+first create the account and copy the kit and paste in your page (head section)
+
+<script src="https://kit.fontawesome.com/91a3d7a69b.js" crossorigin="anonymous"></script>
+
+go to icons ans search icons  ex: instagram
+
+<i class="fa-brands fa-instagram"></i>          // paste in your follows us section
+
+Ex:
+
+<div class="follow-us-section pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="follow-us-section-heading">Follow Us</h1>
+                           <div class="d-flex flex-row justify-content-center" >       
+
+                <div class="follow-us-icon-container">
+                <i class="fa-brands fa-twitter icon"></i>
+                </div>
+                 <div class="follow-us-icon-container">
+                <i class="fa-brands fa-facebook icon"></i>
+                </div>
+               
+
+Navigating to a particular section:
+
+Step1: Adding id to the section which you want to navigate
+
+Step2: Providing id as href attribute value to nav item
+        
+
+    <div class="explore-menu-section pt-5 pb-5" id="Explore-Menu-Section">
+
+    <a class="nav-link" href="#followUs-Section" id="navItem4">Follow Us</a>
+
+
+Fix nav bar at bottom instead of scrolling:    
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white  fixed-bottom">
+
+top:
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white  fixed-top">
+
+
+Bootstrap Modal:
+
+go to components - modal  (to add popup message in our page)
+
+Ex:
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog mt-5">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title modal-class-title" id="exampleModalLabel" >Gift Voucher</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <img
+                        src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/gift-voucher-img.png"
+                        class="w-100"
+                      />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+          <div class="col-12 col-md-5 d-none d-md-block">
+            <img
+              src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png"
+              class="thanking-customers-section-img"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="follow-us-section pt-5 pb-5" id="followUsSection">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="follow-us-section-heading">Follow Us</h1>
+          </div>
+          <div class="col-12">
+            <div class="d-flex flex-row justify-content-center">
+              <div class="follow-us-icon-container">
+                <i class="fab fa-twitter icon"></i>
+              </div>
+              <div class="follow-us-icon-container">
+                <i class="fab fa-instagram icon"></i>
+              </div>
+              <div class="follow-us-icon-container">
+                <i class="fab fa-facebook icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+CSS Gradients:
+
+its a special type of background image formed by the transition b/w 2 or more colors
+
+2 types:
+
+Linear gradients : tranistion of color from one specific direction
+
+Ex:
+
+<body>
+    <div class = "linear-gradient-background">
+        
+    </div>
+
+CSS:
+
+.linear-gradient-background
+{
+    height:100vh;
+    background-image:linear-gradient(#2196f3,#f44336);
+}
+
+We can specify the directions like to left, to top, to right, to bottom:
+
+Ex:
+
+  background-image:linear-gradient(to right,#2196f3,#f44336,#000000);          //giving direction as right
+
+
+
+Radial gradients  : transition of color from outside edges towards inside 
+
+Ex:
+
+<div class = "radial-gradient-background mt-5">
+        
+    </div>
+
+CSS:
+
+.radial-gradient-background
+{
+    height:100vh;
+    background-image:radial-gradient(#2196f3,#f44336);
+}

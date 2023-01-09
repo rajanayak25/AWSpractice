@@ -1,0 +1,12 @@
+a = [20,30,40,50]
+a.append(45)
+a.insert(1,34)
+a.remove(20)
+a.pop()
+a.pop(1)
+del a[2:]
+a.extend([10,12,34,56])   #adding another list
+print(min(a))
+print(max(a))
+print(sum(a))
+print(a)

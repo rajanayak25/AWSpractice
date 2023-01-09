@@ -1,0 +1,467 @@
+
+
+Class - Design (Blueprint of objects)
+
+Object - Instance of class which has behaviour and functionality
+
+         attributes
+         functions(methods)
+Ex: Dog
+
+Attributes -> Color, Breed, Height, Weight
+Behaviours -> Run, Eat, Bark
+
+Imp Note:
+
+-> Every time when we create object, it will create new space in Heap Memory
+-> Memory size will depends on no.of variables and Constructor allocates the size to an object
+
+
+Example of class and object & special method:
+
+class Computer:
+    
+    def __init__(self,cpu,ram):   # initialization of variables(special method - we can't call it explicitly) - Instance method
+        self.cpu = cpu
+        self.ram = ram
+        
+    def config(self):       # definig a frunction
+    
+        print("Config is: ", self.cpu,self.ram)  #binding variabes to method thorugh a self
+
+comp1=Computer('i6',16)   # creating an object 
+comp2=Computer('i7',32) # passing values through a constructor
+
+comp1.config()   # calling a method through a object 
+comp2.config()
+
+O/P:
+
+Config is:  i6 16
+Config is:  i7 32
+
+----------------------------
+
+Comparing two objects:
+
+class Person:
+    
+    def __init__(self):
+        self.name = "Rajesh"
+        self.age = 25
+    
+    def compare(self,other):
+       if self.age == other.age:
+           return True
+       else:
+           return False
+p1=Person()
+p1.age=35   # changing age value of p1 obj
+p2=Person()
+
+if p1.compare(p2):
+    print(" They are same ")
+else:
+    print(" They are not same ")
+
+----------------------------
+Types of variables:
+
+Class variable: variable which is created before init method also called as static variable
+
+Instance variable: varibale which is created with in init method
+
+namespace: Area which we are create/store objects or variables
+
+    2 types: 1. class namespace
+             2. instance namespace
+
+Class and Isntance variable Ex:
+
+class Car:
+    
+    wheels = 5    # class instance
+    
+    def __init__(self):
+        self.brand = "BMW"   # instance variable
+        self.mil = 25
+    
+    
+c1= Car()
+c2= Car()
+c2.brand = "Volvo"
+print(c1.brand,c1.mil, c1.wheels)
+print(c2.brand, c2.mil,c2.wheels)
+
+O/P: 
+
+BMW 25 5
+Volvo 25 5
+
+-------------------------------
+
+Types of Methods:
+
+Accessor method: To aceess the variable values
+
+Mutator method: To Modify the variable values
+
+Ex:
+
+class Marks:
+    def __init__(self,m1,m2):
+        self.m1=m1
+        self.m2=m2
+    
+    def get_m1(self):    # getting m1 value  (Accessor)
+        return self.m1
+        
+    def set_m1(self,value):  # setting m1 value (Mutator)
+        self.m1= value
+    
+m1 = Marks(10,20)
+m2 = Marks(20,30)
+
+m1.set_m1(10)
+print(m1.get_m1())
+
+O/P: 10
+
+------------------------------------
+
+Class Method:
+
+class Student:
+    
+    school = "Telusko"
+    
+    def __init__(self):
+         
+        self.name = "Raj"
+        self.id=215
+     
+    @classmethod     # should use - decorator for class method before function
+    
+    def info(cls):     # cls used for refer the current class variable
+        return cls.school
+      
+print(Student.school)    #printing Student class variable by using class name
+
+O/P:
+
+Telusko
+
+-----------------------------------
+
+Static Method:
+
+-> This method used when we want to work with specific data excluding class and instance methods
+-> We dont need to pass anything like objects/variables
+
+class Student:
+    
+    school = "Telusko"
+       
+    @staticmethod             # decorator for static method 
+
+
+    def info():     # empty parameter
+
+        print(" This is a static method")
+
+s1= Student()
+
+s1.info()
+
+O/P:
+
+This is a static method
+
+---------------------------------------
+
+Inner class:
+
+Class inside a class
+
+Scenario:
+
+When a student have laptop also we need to print its configuration specifically
+
+-> We can create the object of inner class inside outer class or outside of the outer class with class reference
+
+
+class Student:
+    
+    def __init__(self,name,rollno):
+        
+        self.name = name
+        self.rollno = rollno
+        self.lap = self.Laptop()   #defining object variable of inner class in outerclass
+    
+    def show(self):
+        
+        print(self.name,self.rollno)
+        print(self.lap.show())
+    
+    class Laptop:                    #inner class
+        def __init__(self):
+            
+            self.brand = 'Hp'
+            self.cpu = 'i6'
+            self.ram = 16
+            
+        def show(self):
+            return self.brand,self.cpu,self.ram
+            
+s1=Student("Raj",215)
+
+#lap1 = s1.lap     # Creating object using object of outer class
+
+s1.show()
+
+lap1=Student.Laptop()  # creating object for Inner class using outer class
+
+#print(lap1.show())
+
+
+O/P:
+
+Raj 215
+('Hp', 'i6', 16)
+
+------------------------------------------------
+
+Inheritance:
+
+Process of creating Sub classes(child class) from Super class (Parent class)
+
+1. Single level inheritance:
+
+A
+|
+B
+
+class A:
+    
+    def feature1(self):
+        print(" Feature1 working")
+        
+    def feature2(self):
+        print(" Feature2 working")
+        
+class B(A):     # Inheriting B Class from A
+    
+    def feature3(self):
+        print(" Feature3 working")
+        
+    def feature4(self):
+        print(" Feature4 working")
+
+
+b1=B()  # object of subclass , it can access all features of subclass
+
+b1.feature1()
+b1.feature2()
+b1.feature3()     #accessing A class method from B class object
+b1.feature4()
+
+O/P:
+
+ Feature1 working
+ Feature2 working
+ Feature3 working
+ Feature4 working
+
+-------------------------------------
+
+2. Multi Level Inheritance:
+
+A
+|
+B
+|
+C
+
+-> C class can access Both A and B methods
+
+class A:
+    
+    def feature1(self):
+        print(" Feature1 working")
+        
+    def feature2(self):
+        print(" Feature2 working")
+        
+class B(A):     # Inheriting B Class from A
+    
+    def feature3(self):
+        print(" Feature3 working")
+        
+    def feature4(self):
+        print(" Feature4 working")
+        
+class C(B):
+   def feature5(self):
+        print(" Feature5 working")
+c1=C()
+
+c1.feature1()     # A class method
+c1.feature3()     # B class method
+c1.feature5()     # C class method
+
+O/P:
+
+ Feature1 working
+ Feature3 working
+ Feature5 working
+
+------------------------------------
+
+3. Multiple Inheritance:
+
+   A  B
+   |  |
+    C
+
+class A:
+    
+    def feature1(self):
+        print(" Feature1 working")
+        
+    def feature2(self):
+        print(" Feature2 working")
+        
+class B:     # Inheriting B Class from A
+    
+    def feature3(self):
+        print(" Feature3 working")
+        
+    def feature4(self):
+        print(" Feature4 working")
+        
+class C(A,B):
+   def feature5(self):
+        print(" Feature5 working")
+
+c1=C()
+
+#b1=B()
+#b1.feature1()    # 'Error: B' object has no attribute 'feature1' becuse B is a Seperate class
+
+c1.feature1()     # A class method
+c1.feature3()     # B class method
+c1.feature5()     # C class method
+
+O/P:
+
+ Feature1 working
+ Feature3 working
+ Feature5 working
+
+---------------------------------------------
+
+4. Hierarchical Inheritance:
+
+-> Multiple sub classes inherited from One Super class
+
+     A
+     |
+  B, C, D
+
+class A:
+    
+    def feature1(self):
+        print(" Feature1 working")
+        
+    def feature2(self):
+        print(" Feature2 working")
+        
+class B(A):     # Inheriting B Class from A
+    
+    def feature3(self):
+        print(" Feature3 working")
+        
+class C(A):
+    
+   def feature5(self):
+        print(" Feature5 working")
+        
+class D(A):
+    
+    def feature5(self):
+        print(" Feature5 working")
+        
+
+b1=B()
+c1=C()
+d1=D()
+
+b1.feature1()     # B can access A class method
+c1.feature1()     # C can access A class method
+d1.feature1()     # D can access A class method
+
+O/P:
+
+ Feature1 working
+ Feature1 working
+ Feature1 working
+
+-----------------------------------------
+
+5. Hybrid Inheritance:
+
+Combination of various Inheritances
+
+   A
+|    |
+B    C
+|    |
+  D
+
+class A:
+    
+    def feature1(self):
+        print(" Feature1 working")
+        
+    def feature2(self):
+        print(" Feature2 working")
+        
+class B(A):     # Inheriting B Class from A
+    
+    def feature3(self):
+        print(" Feature3 working")
+        
+class C(A):
+    
+   def feature4(self):
+        print(" Feature4 working")
+        
+class D(B,C):
+    
+    def feature5(self):
+        print(" Feature5 working")
+
+b1=B()
+c1=C()
+d1=D()
+
+b1.feature1()     # B can access A class method
+
+c1.feature1()     # C can access A class method
+
+d1.feature3()     # D can access B class method
+
+d1.feature4()    # D can access C class method
+
+O/P:
+
+ Feature1 working
+ Feature1 working
+ Feature3 working
+ Feature4 working
+
+----------------------------------------------------
+
+
+
+

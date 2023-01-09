@@ -1,0 +1,66 @@
+
+None(Null)
+
+Numeric -> int,float,boolean,complex(a+5j)
+
+Sequence: 
+            ->bytes (0 t0 255)
+
+             Ex:
+                elements = [10,20,255,56]
+                x=bytes(elements)
+                x[0] = 12   # bytes can't be modofied
+                print(x)
+
+             ->bytearray
+             
+              Ex:
+                  elements = [10,20,255,56]
+                  x=bytearray(elements)
+                  x[0] = 12   # bytearray can be modofied
+                  print(x)
+
+            ->List
+            ->Tuple
+            ->String
+            ->Range
+
+Set Data type:
+
+              -> Set
+              
+               Ex:
+ 
+               ch= set("Hello")
+               a= ch.update(['H','J'])   # can be modified
+               print(ch)
+
+              -> frozenset
+              
+               Ex:
+
+               ch= set("Hello")
+               a= frozenset(ch)
+               a.update(['J','K'])   # can't be modified
+               print(a)
+
+
+Mapping type:
+
+           -> Dictionary
+
+
+----------------------
+
+Bitwise Operators:
+
+Complement(~)
+
+And(&)
+Or(|)
+
+XOR-> 00 -> 0 11-> 0 01->1 ->10 ->1 
+
+Leftshit(<<)
+Rightshift(>>)
+

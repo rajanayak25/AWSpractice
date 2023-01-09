@@ -1,0 +1,353 @@
+
+add and sub functions:
+
+def add_sub(a,b):
+    
+    c= a+b
+    d= a-b
+    return c,d
+result1,result2 = add_sub(10,20)
+print("addition:",result1,"\n","substraction is:",result2)
+
+--------------------
+
+even or odd function:
+
+def even_odd(n):
+    
+    if n%2==0:
+        return "even"
+    else:
+        return "odd"
+result1=even_odd(4)
+result2=even_odd(7)
+print(result1)
+print(result2)
+
+-------------------
+
+Factorial of numbers:
+
+def fact(n):
+   prod=1  
+   while n>=1:
+       prod= prod*n
+       n-=1
+   return prod
+
+for i in range(1,11):
+
+   print("The Factoral of {} is {}".format(i, fact(i)))
+
+--------------------
+Prime Number or Not:
+
+def is_prime(n):
+    while n>1:
+       x=1    
+       for i in range(2,n):
+           if n%i==0:
+              x=0
+              break
+           else:
+               x=1
+       return x
+     
+num=int(input(" Enter a Number: "))
+result=is_prime(num)
+if result==1:
+    print(num, " is prime ")
+else:
+    print(num, " is not prime ")
+
+---------------------
+
+Prime Number series:
+
+def prime(n):
+    x=1    
+    for i in range(2,n):
+       if n%i==0:
+         x=0
+         break
+       else:
+           x=1
+    return x
+     
+num=int(input(" Enter how many primes do u want?: "))
+i=2              #start with 2
+c=1              #counter
+while True:
+   if prime(i):
+      print(i)
+      c+=1
+   i+=1
+   if c>num:
+       break
+
+O/P:
+
+Enter how many primes do u want?: 5
+2
+3
+5
+7
+11
+
+-------------------
+
+Returning Multiple Values in a function:
+
+def add_sub_mul_div(a,b):
+    
+    a = a+b
+    b= a-b
+    c= a*b
+    d= a/b
+    return a,b,c,d
+    
+result=add_sub_mul_div(10,20)
+
+print("The Results are: ")
+for i in result:
+   print(i)
+
+O/P:
+
+The Results are: 
+30
+10
+300
+3.0
+
+------------------------
+
+Function inside another function:
+
+def display(str):
+    
+    def message():
+        return "How are you?"
+    result = message()+str
+    return result
+    
+x=str(display(" krishna"))
+print(x)
+
+O/P:
+
+How are you? krishna
+
+-----------------------
+
+How to pass a function as a Parameter:
+
+def display(fun):
+    return "Hai" + fun
+def message():
+        return " How are you?" 
+    
+x=display(message())
+print(x)
+
+O/P: Hai How are you?
+
+------------------------
+
+How a function can return another function:
+
+def display():
+    def message():
+        return " How are you?"s
+    return message
+        
+fun=display()
+print(fun())
+
+O/P: How are you?
+
+------------------------
+
+Types of Arguments:
+
+
+def add(a,b): ->defining variables - Formal arguments  -> Position, Keyword, Default, Variable Length
+
+add(10,20) -> Passing values for them - Actual arguments
+
+
+def person(name,age =18):  # assigning 18 as default value
+    
+    print(name)
+    print(age - 5)
+
+#person('navin',28)   # Position args
+
+#person(name = 'navin', age= 31)   # Keyword args
+
+person('navin')
+
+
+# variable length args
+
+def sum(a,*b):  # '*' taking multiple values 'b'
+    
+    c=a     # a treated as integer
+    
+    for i in b:  # b treated as tuple
+       c+=i
+    print(c)
+
+sum(10,20,30,40)
+
+2nd way:
+
+# variable length args
+
+def sum(*b):  # directly passing only 1 parameter which can take multiple values
+    
+    c=0     
+    
+    for i in b:  # b treated as tuple
+       c+=i
+    print(c)
+
+sum(10,20,30,40)
+
+
+# Keyword variable length args
+
+def person(**data):  # '*' taking multiple args as keywords
+    
+    print(data)
+
+person(name = 'Raj',age=25,mobile = 9182232255)  # printing in a format
+
+
+2.
+
+def person(**data):  # '*' taking multiple args as keywords
+    
+  for i,j in data.items():   # printing details by using items() function
+      print(i,j)
+
+person(name = 'Raj',age=25,mobile = 9182232255)  # printing in a format
+
+
+-------------------------
+
+global and globals variable:
+
+# global keyword -> Only use it as global variable
+
+# globals -> We can use for inside(local) and outside (global)
+
+a = 10
+
+def something():
+    
+    #global a     # making 'a' as global
+    a=8       # a value as inside
+    x= globals()['a']
+    print("inside:",a) 
+    globals()['a'] = 15    # updating a value as global as well
+
+something()   
+
+print("outside:",a)
+
+O/P:
+
+inside: 8
+outside: 8
+
+-------------------------------------
+
+Passing a list as a parameter to a function:
+
+def count(lst):
+    
+    even = 0
+    odd  = 0
+    
+    for i in lst:
+        if i%2==0:
+            even+=1
+        else:
+            odd+=1
+    return even,odd
+
+lst = [10,20,15,67,89,56]
+
+even,odd=count(lst)
+
+print("Even is {}, Odd is {}".format(even,odd))
+
+O/P:
+
+Even is 3, Odd is 3
+
+------------------------
+
+Fibonacci series:
+
+def fibo(n):
+  a=0
+  b=1
+  if n==1:
+     print(a)
+  else:
+     print(a)
+     print(b)
+  for i in range(2,n):
+      c=a+b
+      a=b
+      b=c
+      print(c)
+  
+fibo(5)
+
+O/P:
+
+0
+1
+1
+2
+3
+
+-----------------------
+
+
+Factorial series by using Recurison:
+
+def fact(n):
+    
+    if n==0:
+        return 1
+    else:
+       return n*fact(n-1)
+    
+result = fact(5)
+
+for i in range(1,11):
+    
+    print("The Factirial of",i,"is:",fact(i))
+
+O/P:
+
+The Factirial of 1 is: 1
+The Factirial of 2 is: 2
+The Factirial of 3 is: 6
+The Factirial of 4 is: 24
+The Factirial of 5 is: 120
+The Factirial of 6 is: 720
+The Factirial of 7 is: 5040
+The Factirial of 8 is: 40320
+The Factirial of 9 is: 362880
+The Factirial of 10 is: 3628800
+
+---------------------------
+
+
+
+
